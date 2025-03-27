@@ -4,7 +4,7 @@
 <?php $altura = 1.72; // Decimales, Float ?>
 <?php $mayorEdad = true; // Verdadero o Falso, Boolean ?>
 
-<?php $nombreCompleto = "Juan perez";
+<?php $nombreCompleto = "Juan perez"
 // El nombre completo de una persona. Le falta el ; ?>
 
 <?php $Edad = 25;
