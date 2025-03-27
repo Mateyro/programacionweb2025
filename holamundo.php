@@ -18,13 +18,13 @@
 // "Numero" no es nada especifico, ni es un numero, es un String, no tendria ni idea para que se usa esto excepto a lo mejor algun display si se supone que siquiera sea un String
 // es mas probable aun asi que se halla equivocado de tipo de variable. Es imposible saber que hace numero sin mirar a su funcion. ?>
 
-<?php Apellido = 'Fernandez'; // 
+<?php // Apellido = 'Fernandez'; 
 // Le falta el $ para inicializar la variable, despues de eso es claramente el apellido de una persona, no hay otro significado a la palabra despues de todo. ?>
 
-<?php pais_de_origen = 'Uruguay' //
+<?php // pais_de_origen = 'Uruguay' //
 // De vuelta, le falta el $ para inicializar la variable, y le falta el ; despues de eso es el pais de origen de o una persona o un producto, posiblemente un animal, pero mas probablemente una
 // persona basandose en el resto de las variables que estan listadas. ?>
 
-<?php $salario = $2000; // 
+<?php // $salario = $2000; // 
 // Le faltan las '', siendo simplemente $2000, el cual no es posible, es posible que hallan querido decir "$2000" o simplemente "2000" dpendiendo de como funcione el codigo y si 
 // ese numero se necesita usar para algun tipo de matematica en vez de simple display. De otra forma, es obviamente el salario de una persona, el nombre no deja mucho a imaginar ?>
