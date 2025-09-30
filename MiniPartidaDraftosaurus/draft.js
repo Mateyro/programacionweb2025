@@ -27,10 +27,10 @@ class TableroDinosaurios {
     }
 
     guardarJugadas() {
-        localStorage.setItem("casilla:", JSON.stringify(this.jugada.casilla), "dinosaurio:", JSON.stringify(this.jugada.dinosaurio));
-        console.log("casilla:", this.jugada.casilla, "dinosaurio:", this.jugada.dinosaurio);
+        localStorage.setItem("jugadas", JSON.stringify(this.jugadas));
+        console.log("Jugadas:", this.jugadas);
     }
-
+    
     resetearJugadas() {
         localStorage.removeItem("jugadas");
         document.querySelectorAll(".casilla").forEach((casilla) => {
@@ -50,14 +50,19 @@ class TableroDinosaurios {
     agregarEventosDrop() {
         document.querySelectorAll(".casilla").forEach((casilla) => {
             casilla.addEventListener("dragover", (e) => e.preventDefault());
+            let cont;
             casilla.addEventListener("drop", (e) => {
-                e.preventDefault();
-                const dino = e.dataTransfer.getData("text/plain");
-                casilla.textContent = "🦕 " + dino;
+                if (cont == null){cont = 0};
+                cont++;
+                console.log(cont)
+                if (cont <3) {
+                    e.preventDefault();
+                    const dino = e.dataTransfer.getData("text/plain");
+                    casilla.textContent = "🦕 " + dino;
 
-                this.jugadas.push({ casilla: casilla.dataset.casilla, dinosaurio: dino });
-                this.guardarJugadas();
-            });
+                    this.jugadas.push({ casilla: casilla.dataset.casilla, dinosaurio: dino });
+                    this.guardarJugadas();
+            }});
         });
     }
 
