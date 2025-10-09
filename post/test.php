@@ -1,4 +1,4 @@
-<?
+<?php
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -18,7 +18,7 @@ if (!filter_var($input['correo'], FILTER_VALIDATE_EMAIL)) {
 
 echo json_encode([
     "estado" => "ok",
-    "mesnaje" => "Usuario registrado correctamente.",
+    "mensaje" => "Usuario registrado correctamente.",
     "usuario" => $input
 ]);
 ?>
